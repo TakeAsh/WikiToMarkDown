@@ -1,0 +1,15 @@
+FolderIn: Wiki/
+FolderOut: MarkDown/
+CharEscape: "%:<>|&*?;"
+InterWikiEncodings:
+  std:  UTF-8
+  sjis: Shift_JIS
+  euc:  EUC-JP
+  utf8: UTF-8
+ImageExtensions:
+  - .png
+  - .jpg
+  - .jpeg
+  - .gif
+  - .bmp
+  - .svg
