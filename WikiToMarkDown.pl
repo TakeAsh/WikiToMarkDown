@@ -208,6 +208,7 @@ sub convertInline {
     my $line = shift or return '';
     $line =~ s/\[\[(.+?)(:|>)(https?:[^\]]+)\]\]/[$1]($3)/g;           # Link
     $line =~ s/$regInterWikiName/replaceInterWikiName($1,$2,$3)/ge;    # InterWikiName
+    $line =~ s/\[\[([^>]+)>([^\]\s]+)\]\]/[[$1|$2]]/g;                 # Link with alias
     $line =~ s/$regRef/replaceRef($1,$2)/ge;                           # Reference
     $line =~ s/&br;/<br \/>/g;                                         # Line Break (Inline)
     $line =~ s/(\s*)(''')(.*?)\2(\s*)/$1*$3*$4/g;                      # Italic
